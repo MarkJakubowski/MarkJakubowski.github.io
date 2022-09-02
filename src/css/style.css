@@ -1,0 +1,466 @@
+body {
+    font-family: Arial, sans-serif;
+}
+nav{
+    width: 100%;
+    height: 60px;
+    background: #344051;
+}
+.Logo1{
+    color: #fff;
+    font-size: 28px;
+    line-height: 60px;
+    padding-left: 160px;
+    float: left;
+}
+.Menu{
+    float: left;
+    padding-left: 160px; 
+}
+.Menu li{
+    float: left;
+    font-size: 15px;
+    line-height: 60px;
+    margin-right: 15px;
+    text-transform: uppercase;  
+}
+.Menu li a:visited{
+    color: white;
+}
+.main {
+    width: 100%;
+    height: 680px;
+    background: url(../img/shadow.png)bottom no-repeat, 
+        url(../img/boy.png) 90% 100%/auto 90% no-repeat,  
+        url(../img/bg.jpg) center/cover no-repeat;
+}
+.title_container {
+    float: left;
+    color: #2c384a;
+    margin: 250px 0px 0px 280px; 
+}
+.title_container h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.title_container h5 {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #79818d;
+}
+.title_container input {
+    width: 103px;
+    height: 45px;
+    text-align: center;
+    color: #79818d;
+    font-size: 15px;
+    border: 3px solid #6d7682;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 30px 36px 0px 36px;  
+}
+.about_me {
+    width: 100%;
+    height: 490px;
+    background: #fff;
+}
+.about_me h2{
+    text-align: center;
+    font-size: 22px;
+    margin-top: 107px;
+    text-transform: uppercase;
+}
+.polosa1{
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: 60px auto;
+    margin-top: 32px;
+}
+.foto{
+    display: block;
+    margin: 25px auto;
+}
+.about_me p{
+    color: #3f495a;
+    font-size: 15px;
+}
+.text_about_me {
+    margin:0px 200px 0px 200px;
+}
+.second_text {
+    margin:40px 200px 0px 200px;
+}
+.about_me2 input {
+    width: 157px;
+    height: 36px;
+    text-align: right;
+    color: #79818d;
+    font-size: 15px;
+    border: 3px solid #6d7682;
+    background: url(../img/ikon1.png) no-repeat left; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto 96px 604px;
+}
+.skills {
+    width: 100%;
+    height: 520px;
+    background: url(../img/bg2.jpg) no-repeat center/cover; 
+}
+.skills h2{
+    text-align: center;
+    font-size: 22px;
+    color: #263244;
+    padding-top: 107px;
+    text-transform: uppercase;
+}
+.ikony{
+    display: block;
+    text-align: center;
+    word-spacing: 250px;
+    margin-bottom: 30px;
+}
+.skills h3{
+    text-align: center;
+    font-size: 16px;
+    color: #cf7600;
+    margin-bottom: 15px;
+}
+.web_dezain {
+    margin-left: 108px;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    color: #616976;
+}
+.razrabotka {
+    margin-left: 93px;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    color: #616976;
+}
+.seo {
+    margin-left: 75px;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    color: #616976;
+}
+.marketing {
+    margin-right: 37px;
+    text-align: center;
+    font-size: 12px;
+    color: #616976;
+}
+.keisy h2{
+    text-align: center;
+    font-size: 22px;
+    color: #384354;
+    padding-top: 108px;
+    text-transform: uppercase;
+}
+.keisy p {
+    text-align: center;
+    font-size: 12px;
+    color: #626976;   
+}
+.sait {
+    margin: 42px 101px 0px 83px;
+}
+.client{
+    font-size: 17px;
+    color: #384354;
+    text-transform: uppercase;
+    margin: 37px auto 14px 101px;
+    float: left;
+}
+.comp {
+    font-size: 12px;
+    color: #525a69;
+    margin: 0 auto 15px 101px;
+    float: left;
+}
+.Website {
+    text-align: left;
+    font-size: 17px;
+    color: #384354;
+    text-transform: uppercase;
+    margin: -25px auto 14px 101px;
+}
+.web{
+    font-size: 12px;
+    color: #525a69;
+    margin: 0 auto 25px 101px;
+    float: left;
+}
+.nazvanie {
+    display: block;
+    font-size: 17px;
+    color: #384354; 
+    margin: 37px auto 14px 385px;
+}
+.nazvanie_text {
+    display: block;
+    font-size: 15px;
+    color: #3f495a;
+    margin: 0px 83px 0px 385px;
+}
+.keisy input{
+    width: 200px;
+    height: 44px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 3px solid #63b5ae;
+    background: #63b5ae; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 24px auto 0px -126px;
+}
+.calculation h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 100px;
+    color: #1c2534;
+}
+.calculation h3 {
+    font-size: 19px;
+    text-transform: uppercase;
+    color: #1c2534;
+    margin: 30px auto 25px 230px;
+}
+.calculation form {
+    margin: 10px 250px 10px 230px;
+    width: 900px;
+    height: 40px;
+    background-color: #eeeeee;
+}
+.calculation select {
+    display: block;
+    font-size: 15px;
+    color: #626161;
+    background-color: #eeeeee;
+    padding-top: 10px;
+}
+.linia {
+    display: block;
+    margin: 37px 220px auto 230px;
+    border-bottom: 2px solid #d1d1d1;
+}
+.calculation h5 {
+    font-size: 14px;
+    color: #1c2534;
+    margin: 20px auto 0px 230px; 
+    float: left;
+}
+.calculation p {
+    display: block;
+    font-size: 19px;
+    color: #1c2534;
+    margin: 20px auto 0px 1120px; 
+}
+.statistics {
+    background: url(../img/static_fon.jpg) center/cover no-repeat;
+    width: 100%;
+    height: 498px;
+    margin-top: 100px;
+}
+.statistics h2 {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #323e4f;
+    padding-top: 100px;
+}
+.ikony2{
+    display: block;
+    text-align: center;
+    word-spacing: 250px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+}
+
+.statistics h3{
+    font-size: 26px;
+    color: #323e4f;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.klienty{
+    margin-left: 122px;
+    float: left;
+    text-align: center;
+}
+.clock{
+    margin-left: 175px;
+    float: left;
+    text-align: center;
+}
+.end_proekt{
+    margin-left: 173px;
+    float: left;
+    text-align: center;
+}
+.nagrady{
+   margin-left: 936px;
+   text-align: center;
+}
+.statistics h4{
+    font-size: 13px;
+    color: #323e4f;
+    text-transform: uppercase;
+}
+.reviews h2{
+    font-size: 23px;
+    color: #243042;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 33px;
+}
+.otzyv {
+    display: block;
+    padding-left: calc(50% - 50px);
+    padding-bottom: 34px;
+}
+.reviews p{
+    font-size: 13px;
+    color: #525965;
+    text-align: center;
+    margin-top: 35px
+}
+.krug{
+    display: block;
+    text-align: center;
+    word-spacing: 5px;
+    margin-top: 40px;
+    margin-bottom: 85px;
+}   
+.contact{
+    width: 100%;
+    height: 800px;
+    background: url(../img/bg3.jpg) center/cover no-repeat;
+}
+.contact h2 {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-top: 70px;
+}
+.opis_kont{
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+.ikony3{
+    display: block;
+    text-align: center;
+    word-spacing: 200px;
+    padding-top: 20px;
+}
+.adres{
+    margin-left: 390px;
+    float: left;
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 38px;
+    font-size: 13px;
+}
+.tel{
+    margin-left: 110px;
+    float: left;
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 38px;
+    font-size: 13px;
+}
+.mail{
+    margin-right: 265px;
+    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+    margin-bottom: 38px;
+    font-size: 13px;
+}
+.contact h3{
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 45px; 
+}
+.text1 {
+    display: block;
+    height: 35px;
+    width: 300px;
+    background: #d2d6dc;
+    color: #797a7c;
+    margin: auto 30px 14px 368px;
+    float: left;
+}
+.text2{
+    display: block;
+    height: 35px;
+    width: 300px;
+    background: #d2d6dc;
+    color: #797a7c; 
+    margin-left: 368px 14px 30px;
+}
+.area{
+    width: 630px;
+    height: 93px;
+    background: #d2d6dc;
+    color: #797a7c;
+    margin: auto 368px 25px 368px;
+    resize: none;
+}
+.sent{
+    height: 45px;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    border: 3px solid #fff;
+    background: bottom;  
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto 633px auto 633px;
+    }
+
+.map{
+    width: 100%;
+    height: 350px;
+    background: url(../img/maps.jpg) center/cover no-repeat;
+}
+.map img{
+    margin: 80px 171px 80px 171px;
+}
+footer {
+    height: 96px;
+    width: 100%;
+    background: url(../img/bg4.png) center/cover no-repeat;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+.podval{
+    padding-top: 41px;
+}
+    
+    
+    
+    
+    
+    
+    
