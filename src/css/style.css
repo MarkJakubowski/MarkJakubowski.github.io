@@ -1,10 +1,12 @@
-body {
+body{
     font-family: Arial, sans-serif;
 }
 nav{
     width: 100%;
     height: 60px;
-    background: #344051;
+    background: rgba(52, 64, 81, 1);
+    position: fixed;
+    z-index: 101;
 }
 .Logo1{
     color: #fff;
@@ -12,7 +14,19 @@ nav{
     line-height: 60px;
     padding-left: 160px;
     float: left;
+    -webkit-animation: coming 4s ease;
+    -o-animation: coming 4s ease;
+    animation: coming 4s ease;
 }
+@keyframes coming{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 .Menu{
     float: left;
     padding-left: 160px; 
@@ -22,10 +36,50 @@ nav{
     font-size: 15px;
     line-height: 60px;
     margin-right: 15px;
-    text-transform: uppercase;  
+    opacity: 0;
+    text-transform: uppercase;
+    -webkit-animation: bar 0.4s forwards ease;
+    -o-animation: bar 0.4s forwards ease;
+    animation: bar 0.4s forwards ease;
 }
-.Menu li a:visited{
+@keyframes bar{
+    from{
+        opacity: 0;
+        margin-top: -70px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+.Menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.Menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.Menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.Menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.Menu li:nth-child(6){
+    animation-delay: 2s;
+}
+.Menu li a:hover{
+    color: #eb8907;
+    transform: scale(1.2);
+}
+.Menu li a:active{
+    margin-top: 10px;
+    color: #fdb960;
+}
+.Menu a {
     color: white;
+    transition: all 0.4s;
+    display: inline-block;
+    transform: scale(1);
 }
 .main {
     width: 100%;
@@ -37,7 +91,23 @@ nav{
 .title_container {
     float: left;
     color: #2c384a;
-    margin: 250px 0px 0px 280px; 
+    margin: 250px 0px 0px 280px;
+    -webkit-animation: container 1s ease forwards;
+    -o-animation: container 1s ease forwards;
+    animation: container 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+    z-index: 100;
+}
+@keyframes container{
+    from{
+        margin-left: -400px;
+        opacity: 0;
+    }
+    to{
+        margin-left: 280px;
+        opacity: 1;
+    }
 }
 .title_container h1 {
     font-size: 40px;
@@ -60,7 +130,14 @@ nav{
     background: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 30px 36px 0px 36px;  
+    margin: 30px 36px 0px 36px; 
+    transform: scale(1);
+    transition: all 0.4s;
+}
+.title_container input:hover{
+    background: #344051;
+    color: #fff;
+    transform: scale(1.3);
 }
 .about_me {
     width: 100%;
@@ -105,11 +182,20 @@ nav{
     border-radius: 5px;
     cursor: pointer;
     margin: 20px auto 96px 604px;
+    transform: scale(1);
+    transition: all 0.4s;
+}
+.about_me2 input:hover{
+    background: #344051;
+    color: #fff;
+    transform: scale(1.3);
+    text-align: center;  
 }
 .skills {
     width: 100%;
     height: 520px;
     background: url(../img/bg2.jpg) no-repeat center/cover; 
+    background-attachment: fixed;
 }
 .skills h2{
     text-align: center;
@@ -222,6 +308,12 @@ nav{
     border-radius: 5px;
     cursor: pointer;
     margin: 24px auto 0px -126px;
+    transform: scale(1);
+    transition: all 0.4s
+}
+.keisy input:hover{
+    transform: scale(1.3);
+    color: black;
 }
 .calculation h2 {
     text-align: center;
@@ -267,6 +359,7 @@ nav{
 }
 .statistics {
     background: url(../img/static_fon.jpg) center/cover no-repeat;
+    background-attachment: fixed;
     width: 100%;
     height: 498px;
     margin-top: 100px;
@@ -408,6 +501,16 @@ nav{
     color: #797a7c;
     margin: auto 30px 14px 368px;
     float: left;
+    transform: scale(1);
+    transition: all 0.4s;
+    z-index: 100;
+    position: relative;
+}
+.text1:focus{
+    background: #fff;
+    color: black;
+    transform: scale(1.3);
+    z-index: 101;
 }
 .text2{
     display: block;
@@ -416,6 +519,16 @@ nav{
     background: #d2d6dc;
     color: #797a7c; 
     margin-left: 368px 14px 30px;
+    transform: scale(1);
+    transition: all 0.4s;
+    z-index: 100;
+    position: relative;
+}
+.text2:focus{
+    background: #fff;
+    color: black;
+    transform: scale(1.3);
+    z-index: 101;
 }
 .area{
     width: 630px;
@@ -424,6 +537,16 @@ nav{
     color: #797a7c;
     margin: auto 368px 25px 368px;
     resize: none;
+    transform: scale(1);
+    transition: all 0.4s;
+    z-index: 100;
+    position: relative;
+}
+.area:focus{
+    background: #fff;
+    color: black;
+    transform: scale(1.3);
+    z-index: 101;
 }
 .sent{
     height: 45px;
@@ -436,8 +559,14 @@ nav{
     border-radius: 5px;
     cursor: pointer;
     margin: auto 633px auto 633px;
-    }
-
+    transition: all 0.4s;
+    transform: scale(1);
+}
+.sent:hover{
+    background: bottom;
+    transform: scale(1.3);
+    border: 3px solid #eb8907;
+}
 .map{
     width: 100%;
     height: 350px;
