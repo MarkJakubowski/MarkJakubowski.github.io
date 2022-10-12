@@ -1,18 +1,20 @@
-body{
-    font-family: Arial, sans-serif;
-}
 nav{
     width: 100%;
     height: 60px;
     background: rgba(52, 64, 81, 1);
     position: fixed;
-    z-index: 101;
+    z-index: 100;
 }
+@media (max-width:287px){
+    nav{
+        height: 120px;
+    }
+}
+    
 .Logo1{
     color: #fff;
-    font-size: 28px;
+    font-size: 18px;
     line-height: 60px;
-    padding-left: 160px;
     float: left;
     -webkit-animation: coming 4s ease;
     -o-animation: coming 4s ease;
@@ -28,14 +30,13 @@ nav{
 }
 
 .Menu{
-    float: left;
-    padding-left: 160px; 
+    float: left; 
 }
 .Menu li{
+    margin-right: 35px;
     float: left;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 60px;
-    margin-right: 15px;
     opacity: 0;
     text-transform: uppercase;
     -webkit-animation: bar 0.4s forwards ease;
@@ -76,10 +77,14 @@ nav{
     color: #fdb960;
 }
 .Menu a {
+    text-decoration: none;
     color: white;
     transition: all 0.4s;
     display: inline-block;
     transform: scale(1);
+}
+.btn-outline-secondary:visited{
+    color: #fff;
 }
 .main {
     width: 100%;
@@ -89,15 +94,14 @@ nav{
         url(../img/bg.jpg) center/cover no-repeat;
 }
 .title_container {
+    margin-top: 85px;
     float: left;
     color: #2c384a;
-    margin: 250px 0px 0px 280px;
     -webkit-animation: container 1s ease forwards;
     -o-animation: container 1s ease forwards;
     animation: container 1s ease forwards;
     animation-delay: 1s;
     opacity: 0;
-    z-index: 100;
 }
 @keyframes container{
     from{
@@ -105,15 +109,15 @@ nav{
         opacity: 0;
     }
     to{
-        margin-left: 280px;
+        margin-left: 0px;
         opacity: 1;
     }
 }
 .title_container h1 {
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 50px;
+    font-weight:900;
     text-align: center;
-}
+} 
 .title_container h5 {
     margin-top: 20px;
     font-size: 20px;
@@ -130,46 +134,121 @@ nav{
     background: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 30px 36px 0px 36px; 
+    margin-top: 30px; 
+    margin-right: 50px;
+    margin-left: 80px;
     transform: scale(1);
     transition: all 0.4s;
+}
+@media (max-width:490px){
+    .title_container{
+        width: 100%;
+        height: 200px;
+    }
+    .title_container input{
+        display: block;
+        text-align: center;
+        margin-top: 20px; 
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+    .title_container h1{
+        font-size: 30px;
+        font-weight:900;
+        text-align: center;
+    }
+    .title_container h5 {
+        justify-content: center;
+        font-size: 20px;
+    }
 }
 .title_container input:hover{
     background: #344051;
     color: #fff;
     transform: scale(1.3);
 }
+@media (max-width: 991px){
+    .title_container, .title_container h5, .title_container input{
+        color: white;
+        position: relative;
+    }
+    .title_container input{
+        border: 3px solid #fff;
+    }
+    .main{
+        position: relative;
+    }
+    .main::after{
+        content: "";
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: rgba(0,0,0,0.4);
+    }
+}
+.title_container {
+    -webkit-animation: container 0.4s ease forwards;
+    -o-animation: container 0.4s ease forwards;
+    animation: container 0.4s ease forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+    z-index: 1;
+}
+@keyframes container{
+    from{
+        margin-left: -400px;
+        opacity: 0;
+    }
+    to{
+        margin-left: 0px;
+        opacity: 1;
+    }
+}
+    .btn-color{
+        color: white;
+        border: 2px solid #fff;
+    }
+}
 .about_me {
     width: 100%;
-    height: 490px;
+    height: 670px;
     background: #fff;
 }
 .about_me h2{
     text-align: center;
     font-size: 22px;
-    margin-top: 107px;
+    margin-top: 40px;
     text-transform: uppercase;
 }
 .polosa1{
     display: block;
     width: 70px;
     height: 4px;
-    margin: 60px auto;
     margin-top: 32px;
 }
 .foto{
     display: block;
-    margin: 25px auto;
+    margin-top: 25px;
+}
+@media (max-width: 575px){
+    .foto{
+        display: block;
+        width: 45%;
+        height: 45%;
+    }
 }
 .about_me p{
     color: #3f495a;
     font-size: 15px;
 }
 .text_about_me {
-    margin:0px 200px 0px 200px;
+    margin-top:20px;
 }
 .second_text {
-    margin:40px 200px 0px 200px;
+    margin-top:40px;
 }
 .about_me2 input {
     width: 157px;
@@ -181,7 +260,7 @@ nav{
     background: url(../img/ikon1.png) no-repeat left; 
     border-radius: 5px;
     cursor: pointer;
-    margin: 20px auto 96px 604px;
+    margin-top: 20px;
     transform: scale(1);
     transition: all 0.4s;
 }
@@ -189,13 +268,32 @@ nav{
     background: #344051;
     color: #fff;
     transform: scale(1.3);
-    text-align: center;  
+    text-align: center;
 }
 .skills {
     width: 100%;
     height: 520px;
     background: url(../img/bg2.jpg) no-repeat center/cover; 
     background-attachment: fixed;
+   margin-top: 50px;
+}
+@media (max-width:767px){
+    .skills {
+    width: 100%;
+    height: 780px;
+    }
+}
+@media (max-width:575px){
+    .skills {
+    width: 100%;
+    height: 1050px;
+    }
+}
+@media (max-width:266px){
+    .skills {
+    width: 100%;
+    height: 1150px;
+    }
 }
 .skills h2{
     text-align: center;
@@ -205,109 +303,102 @@ nav{
     text-transform: uppercase;
 }
 .ikony{
-    display: block;
-    text-align: center;
-    word-spacing: 250px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 .skills h3{
-    text-align: center;
+   padding-top: 20px;
     font-size: 16px;
     color: #cf7600;
-    margin-bottom: 15px;
 }
 .web_dezain {
-    margin-left: 108px;
-    float: left;
-    text-align: center;
     font-size: 12px;
     color: #616976;
 }
 .razrabotka {
-    margin-left: 93px;
-    float: left;
-    text-align: center;
     font-size: 12px;
     color: #616976;
 }
 .seo {
-    margin-left: 75px;
-    float: left;
-    text-align: center;
     font-size: 12px;
     color: #616976;
 }
 .marketing {
-    margin-right: 37px;
-    text-align: center;
     font-size: 12px;
     color: #616976;
 }
 .keisy h2{
-    text-align: center;
     font-size: 22px;
     color: #384354;
-    padding-top: 108px;
+    padding-top: 80px;
     text-transform: uppercase;
 }
 .keisy p {
-    text-align: center;
-    font-size: 12px;
+    margin-top: 30px;
+    font-size: 15px;
     color: #626976;   
 }
-.sait {
-    margin: 42px 101px 0px 83px;
+.button_keisy{
+    display: none;
+}
+@media (max-width:300px){
+    .button_keisy{
+        display: block;
+        padding-top: 40px;
+    }
+    .client{
+        display: none;
+    }
+    .nazvanie{
+        display: none;
+    }
+    .comp{
+        display: none;
+    }
+    .nazvanie_text{
+        display: none;
+    }
+    .Website{
+        display: none;
+    }
+    .web{
+        display: none;
+    }
+    .input_keisy{
+        display: none;
+    }
+    .keisy{
+        height: 600px;
+    }
 }
 .client{
+    margin-top: 20px;
     font-size: 17px;
     color: #384354;
     text-transform: uppercase;
-    margin: 37px auto 14px 101px;
-    float: left;
 }
 .comp {
     font-size: 12px;
     color: #525a69;
-    margin: 0 auto 15px 101px;
-    float: left;
 }
 .Website {
-    text-align: left;
     font-size: 17px;
     color: #384354;
     text-transform: uppercase;
-    margin: -25px auto 14px 101px;
 }
 .web{
     font-size: 12px;
     color: #525a69;
-    margin: 0 auto 25px 101px;
-    float: left;
-}
-.nazvanie {
-    display: block;
-    font-size: 17px;
-    color: #384354; 
-    margin: 37px auto 14px 385px;
-}
-.nazvanie_text {
-    display: block;
-    font-size: 15px;
-    color: #3f495a;
-    margin: 0px 83px 0px 385px;
 }
 .keisy input{
-    width: 200px;
-    height: 44px;
     text-align: center;
     color: #fff;
     font-size: 15px;
-    text-transform: uppercase;
     border: 3px solid #63b5ae;
     background: #63b5ae; 
     border-radius: 5px;
     cursor: pointer;
-    margin: 24px auto 0px -126px;
+    margin-top: 24px;
     transform: scale(1);
     transition: all 0.4s
 }
@@ -315,47 +406,69 @@ nav{
     transform: scale(1.3);
     color: black;
 }
+.nazvanie {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #384354;    
+}
+.nazvanie_text {
+    font-size: 15px;
+    color: #3f495a;
+}
 .calculation h2 {
-    text-align: center;
     font-size: 30px;
-    margin-top: 100px;
+    margin-top: 80px;
     color: #1c2534;
 }
 .calculation h3 {
     font-size: 19px;
     text-transform: uppercase;
     color: #1c2534;
-    margin: 30px auto 25px 230px;
+    margin-top: 30px;
 }
 .calculation form {
-    margin: 10px 250px 10px 230px;
-    width: 900px;
-    height: 40px;
+    margin-top: 10px;
     background-color: #eeeeee;
 }
 .calculation select {
-    display: block;
     font-size: 15px;
     color: #626161;
     background-color: #eeeeee;
     padding-top: 10px;
 }
 .linia {
-    display: block;
-    margin: 37px 220px auto 230px;
+    margin-top: 37px;
     border-bottom: 2px solid #d1d1d1;
 }
 .calculation h5 {
     font-size: 14px;
     color: #1c2534;
-    margin: 20px auto 0px 230px; 
-    float: left;
+    margin-top: 20px;
 }
 .calculation p {
-    display: block;
     font-size: 19px;
     color: #1c2534;
-    margin: 20px auto 0px 1120px; 
+    margin-top: 20px; 
+}
+.form_width{
+    width: 100%;
+}
+.input_calc{
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    border: 3px solid #63b5ae;
+    background: #63b5ae; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 35px;
+    margin-bottom: 40px;
+    transform: scale(1);
+    transition: all 0.4s
+}
+.input_calc:hover{
+    transform: scale(1.3);
+    color: black;
 }
 .statistics {
     background: url(../img/static_fon.jpg) center/cover no-repeat;
@@ -363,6 +476,16 @@ nav{
     width: 100%;
     height: 498px;
     margin-top: 100px;
+}
+@media (max-width: 767px){
+    .statistics{
+       height: 700px; 
+    }
+}
+@media (max-width: 575px){
+    .statistics{
+       height: 1100px; 
+    }
 }
 .statistics h2 {
     text-align: center;
@@ -372,11 +495,9 @@ nav{
     padding-top: 100px;
 }
 .ikony2{
-    display: block;
     text-align: center;
-    word-spacing: 250px;
-    margin-bottom: 30px;
     padding-top: 40px;
+    height: 100%;
 }
 
 .statistics h3{
@@ -384,64 +505,56 @@ nav{
     color: #323e4f;
     text-transform: uppercase;
     margin-bottom: 30px;
-}
-.klienty{
-    margin-left: 122px;
-    float: left;
-    text-align: center;
-}
-.clock{
-    margin-left: 175px;
-    float: left;
-    text-align: center;
-}
-.end_proekt{
-    margin-left: 173px;
-    float: left;
-    text-align: center;
-}
-.nagrady{
-   margin-left: 936px;
-   text-align: center;
+    margin-top: -40px;
 }
 .statistics h4{
-    font-size: 13px;
+    font-size: 16px;
     color: #323e4f;
     text-transform: uppercase;
 }
+
 .reviews h2{
     font-size: 23px;
     color: #243042;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 33px;
+    margin-top: 140px;
 }
 .otzyv {
-    display: block;
-    padding-left: calc(50% - 50px);
+    margin-top: 40px;
     padding-bottom: 34px;
+}
+@media (max-width: 575px){
+    .otzyv{
+        display: block;
+        width: 45%;
+        height: 45%;
+    }
 }
 .reviews p{
     font-size: 13px;
     color: #525965;
-    text-align: center;
     margin-top: 35px
 }
 .krug{
-    display: block;
-    text-align: center;
     word-spacing: 5px;
     margin-top: 40px;
     margin-bottom: 85px;
 }   
+
+
+
 .contact{
     width: 100%;
     height: 800px;
     background: url(../img/bg3.jpg) center/cover no-repeat;
 }
+@media (max-width:767px){
+    .contact{
+        height: 1000px;
+    }
+}
 .contact h2 {
-    text-align: center;
     font-size: 22px;
     text-transform: uppercase;
     color: #fff;
@@ -451,56 +564,37 @@ nav{
     font-size: 13px;
     color: #fff;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 35px;
+    margin-top: 30px;
 }
 .ikony3{
-    display: block;
-    text-align: center;
-    word-spacing: 200px;
     padding-top: 20px;
 }
 .adres{
-    margin-left: 390px;
-    float: left;
-    text-align: center;
     color: #fff;
     margin-top: 10px;
-    margin-bottom: 38px;
     font-size: 13px;
 }
 .tel{
-    margin-left: 110px;
-    float: left;
-    text-align: center;
     color: #fff;
     margin-top: 10px;
-    margin-bottom: 38px;
     font-size: 13px;
 }
 .mail{
-    margin-right: 265px;
-    text-align: center;
     color: #fff;
-    padding-top: 15px;
-    margin-bottom: 38px;
+    margin-top: 10px;
     font-size: 13px;
 }
 .contact h3{
     font-size: 16px;
     color: #fff;
     text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 45px; 
+    margin-top: 30px;
 }
 .text1 {
-    display: block;
+    margin-top: 20px;
     height: 35px;
-    width: 300px;
     background: #d2d6dc;
     color: #797a7c;
-    margin: auto 30px 14px 368px;
-    float: left;
     transform: scale(1);
     transition: all 0.4s;
     z-index: 100;
@@ -513,12 +607,10 @@ nav{
     z-index: 101;
 }
 .text2{
-    display: block;
+    margin-top: 20px;
     height: 35px;
-    width: 300px;
     background: #d2d6dc;
     color: #797a7c; 
-    margin-left: 368px 14px 30px;
     transform: scale(1);
     transition: all 0.4s;
     z-index: 100;
@@ -531,11 +623,10 @@ nav{
     z-index: 101;
 }
 .area{
-    width: 630px;
     height: 93px;
+    margin-top: 20px;
     background: #d2d6dc;
     color: #797a7c;
-    margin: auto 368px 25px 368px;
     resize: none;
     transform: scale(1);
     transition: all 0.4s;
@@ -558,7 +649,7 @@ nav{
     background: bottom;  
     border-radius: 5px;
     cursor: pointer;
-    margin: auto 633px auto 633px;
+    margin-top: 30px;
     transition: all 0.4s;
     transform: scale(1);
 }
@@ -568,12 +659,16 @@ nav{
     border: 3px solid #eb8907;
 }
 .map{
+    display: block;
+    text-align: center;
     width: 100%;
-    height: 350px;
-    background: url(../img/maps.jpg) center/cover no-repeat;
+    height: auto;
+    background-color: #c0dfc0;
 }
-.map img{
-    margin: 80px 171px 80px 171px;
+@media (max-width: 991px){
+    .map{
+        height: 50px;
+    }
 }
 footer {
     height: 96px;
@@ -586,10 +681,12 @@ footer {
 .podval{
     padding-top: 41px;
 }
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
