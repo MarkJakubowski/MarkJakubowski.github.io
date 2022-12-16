@@ -1,5 +1,5 @@
 "use strict"
-alert ("Здравствуй уважаемый клиент. Давай ознакомимся с тем, что я могу предложить?");
+/*alert ("Здравствуй уважаемый клиент. Давай ознакомимся с тем, что я могу предложить?");
 
 let name_type; {
 do {name_type = prompt("Какой сайт необходим? Сайт-визитка - 1; Интернет-магазин - 2; Блог - 3.");} 
@@ -129,12 +129,78 @@ alert("При вводе данных вы допустили ошибку. По
 
 if (p>0){
 alert("Приблизительная стоимость согласно выбранным параметрам составила " +(p)+ " рос. рублей");   
+}*/
+$(document).ready (function(){
+
+$(window).scroll(() => {
+                 
+let scrollDistance = $(window) .scrollTop();
+$('.section').each((i,el) =>{
+    
+   if($(el).offset().top - $('nav').outerHeight() <= scrollDistance){
+       $('nav li a') .each((i,el) => {
+           if ($(el).hasClass('active')){
+               $(el).removeClass ('active');
+           }
+       });
+       $('nav li:eq(' + i + ')').find('a') .addClass('active');
+   } 
+});
+    });
+    
+
+let options = {threshold:[0.6]};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = $('.elementAnimations');
+    elements.each((i,el) =>{
+       observer.observe(el); 
+    });
+function onEntry (entry){
+    entry.forEach(change =>{
+       if(change.isIntersecting){
+           change.target.classList.add('showAnimation');
+       } 
+    });
 }
+/*Подгрузка нужной области в процессе скрола*/
+
+/*function onEntry (entry){
+    entry.forEach(change =>{
+       if(change.isIntersecting){
+           change.target.src = change.target.dataset.src;
+       } 
+    });
+}
+Функция для прогрузки изображений*/
+
+$(document).ready(function() {
+  $('.image-link').magnificPopup({type:'image'});
+});
+    
+function calculate(){
+   let sum = parseInt($("#select1 option:selected").val()) + parseInt($("#select2 option:selected").val()) + parseInt($("#select3 option:selected").val());
+   let days = parseInt($("#select1 option:selected").attr("days")) + parseInt($("#select2 option:selected").attr("days")) + parseInt($("#select3 option:selected").attr("days"));
+   $(".day .digit").text(days);
+   $(".pay .digit").text(sum);   
+}
+$("select").on("change", function(){
+    calculate();
+});
+calculate();
+ 
+    
+   
+   
+   
+});
+    
+    
+    
+
+        
 
 
      
-
-
 
 
 
